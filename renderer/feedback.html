@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Feedback — Amrita Sports Meet 2026</title>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">
+        <span class="logo">Amrita Sports Meet</span>
+      </a>
+      <div>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Events</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h2>Send Feedback</h2>
+
+      <form id="fbForm">
+        <h3>Participant Feedback</h3>
+        <div id="fbMsg" class="msg"></div>
+        <div class="row">
+          <div class="field"><label>Your Name</label><input name="fname" placeholder="Full name"></div>
+          <div class="field"><label>Participant Roll No.*</label><input name="freg" placeholder="e.g. BL.SC.U4CSE25250 "></div>
+        </div>
+        <div class="field"><label>Event Attended*</label>
+          <select name="fcategory">
+            <option value="">Select</option>
+            <option>Track & Field</option>
+            <option>Basketball</option>
+            <option>Football</option>
+            <option>Badminton</option>
+            <option>Volleyball</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Rating* (1–5)</label>
+          <div class="stars">
+            <input type="radio" name="rating" id="s5" value="5"><label for="s5">5</label>
+            <input type="radio" name="rating" id="s4" value="4"><label for="s4">4</label>
+            <input type="radio" name="rating" id="s3" value="3"><label for="s3">3</label>
+            <input type="radio" name="rating" id="s2" value="2"><label for="s2">2</label>
+            <input type="radio" name="rating" id="s1" value="1"><label for="s1">1</label>
+          </div>
+        </div>
+        <div class="field"><label>Comments* (min. 20 characters)</label><textarea name="comment" placeholder="Share your thoughts about the sports meet"></textarea></div>
+        <button type="submit">Submit Feedback</button>
+      </form>
+
+      <div class="fb-list" id="fbList"></div>
+    </div>
+
+    <footer>
+      <p>Amrita Sports Meet 2026 | Amrita Vishwa Vidyapeetham |  +91 9986206660 |  sports@amrita.blr.edu</p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

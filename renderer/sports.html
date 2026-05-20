@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Amrita Sports Meet 2026</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<nav>
+  <a href="index.html">
+        <span class="logo">Amrita Sports Meet</span>
+  </a>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="sports.html">Events</a>
+    <a href="feedback.html">Feedback</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h2>Event Categories</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Track & Field</h3>
+      <div class="meta">Event: 100m, 200m, Long Jump<br>Date: July 3, 2026 | 8AM–12PM<br>Venue: Amrita Football Ground<br>Fee: ₹100</div>
+      <span class="badge open">Open</span>
+    </div>
+    <div class="card">
+      <h3>Basketball</h3>
+      <div class="meta">Event: Men's & Women's Teams<br>Date: July 3, 2026 | 1PM–5PM<br>Venue: Boys Hostel Basket Ball Court<br>Fee: ₹150</div>
+      <span class="badge open">Open</span>
+    </div>
+    <div class="card">
+      <h3>Football</h3>
+      <div class="meta">Event: 7-a-side Tournament<br>Date: July 4, 2026 | 9AM–4PM<br>Venue: Amrita Football Ground<br>Fee: ₹180</div>
+      <span class="badge open">Open</span>
+    </div>
+    <div class="card">
+      <h3>Badminton</h3>
+      <div class="meta">Event: Singles & Doubles<br>Date: July 4, 2026 | 9AM–2PM<br>Venue: Amrita Badminton Courts<br>Fee: ₹120</div>
+      <span class="badge closed">Closed</span>
+    </div>
+    <div class="card">
+      <h3>Volleyball</h3>
+      <div class="meta">Event: Men's & Women's Teams<br>Date: July 5, 2026 | 10AM–3PM<br>Venue: Sudhamani Hall<br>Fee: ₹140</div>
+      <span class="badge closed">Closed</span>
+    </div>
+  </div>
+
+  <div style="margin-top:2.5rem">
+    <div class="count-box">
+      <p style="font-size:.85rem;color:var(--muted)">Total Registrations</p>
+      <span id="regCount">0</span>
+    </div>
+
+    <form id="regForm">
+      <h3>Team Registration</h3>
+      <div id="formMsg" class="msg"></div>
+      <div class="row">
+        <div class="field"><label>Participant Name*</label><input name="sname" placeholder="Full name"></div>
+        <div class="field"><label>Student ID*</label><input name="regnum" placeholder="e.g. 25250"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Email ID*</label><input name="email" type="email" placeholder="you@example.com"></div>
+        <div class="field"><label>Mobile Number*</label><input name="mobile" placeholder="10-digit number"></div>
+      </div>
+      <div class="field"><label>Sport/Event*</label><input name="ptitle" placeholder="e.g. Basketball"></div>
+      <div class="row">
+        <div class="field"><label>Category*</label>
+          <select name="category">
+            <option value="">Select</option>
+            <option>Track & Field</option>
+            <option>Basketball</option>
+            <option>Football</option>
+            <option>Badminton (Closed)</option>
+            <option>Volleyball (Closed)</option>
+          </select>
+        </div>
+        <div class="field"><label>Team Name*</label><input name="teamname" placeholder="Your team name"></div>
+      </div>
+      <div class="row">
+        <div class="field"><label>Department*</label><input name="dept" placeholder="e.g. Sports Science"></div>
+        <div class="field"><label>Year*</label>
+          <select name="year"><option value="">Year </option><option>1st Year</option><option>2nd Year</option><option>3rd Year</option><option>4th Year</option></select>
+        </div>
+      </div>
+      <div class="field"><label>Number of Team Members* (1–6)</label><input name="members" type="number" min="1" max="6" placeholder="1 to 6"></div>
+      <button type="submit">Register Team</button>
+    </form>
+
+    <div class="reg-list" id="regList"></div>
+  </div>
+</div>
+
+<footer>
+  <p>Amrita Sports Meet 2026 | Amrita Vishwa Vidyapeetham | 9986206660 | sports@amrita.blr.edu</p>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

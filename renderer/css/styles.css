@@ -1,0 +1,366 @@
+
+:root {
+    --bg: #0a0a0f;
+    --card: #13131a;
+    --accent: #f0c040;
+    --accent2: #7c5cfc;
+    --text: #e8e8f0;
+    --muted: #666;
+    --border: #2a2a3a;
+    --success: #2ecc71;
+    --error: #e74c3c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+nav {
+    background: #0d0d15;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav .logo {
+    font-family: sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    color: var(--accent);
+}
+
+.heading {
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    background: radial-gradient(ellipse at top, #1a1530 0%, var(--bg) 70%);
+}
+
+.heading h1 {
+    font-family:   sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.heading h1 span {
+    color: var(--accent);
+}
+
+.heading p {
+    color: var(--muted);
+    max-width: 500px;
+    margin: 0.8rem auto 0;
+    font-size: 0.95rem;
+}
+
+.clock {
+    font-family:   sans-serif;
+    font-size: 1.1rem;
+    color: var(--accent2);
+    margin-top: 1rem;
+}
+
+.announce {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    margin: 2rem;
+    padding: 1rem 1.2rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin-top: 3rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h2 {
+    font-family:   sans-serif;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.2rem;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover {
+    border-color: var(--accent2);
+    transform: translateY(-2px);
+}
+
+.card h3 {
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+}
+
+.card .meta {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.open {
+    background: #1a3a2a;
+    color: var(--success);
+}
+
+.closed {
+    background: #3a1a1a;
+    color: var(--error);
+}
+
+form {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form h3 {
+    font-family:   sans-serif;
+    margin-bottom: 1rem;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+}
+
+label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    background: #0d0d15;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.6rem 0.8rem;
+    border-radius: 6px;
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--accent2);
+}
+
+select option {
+    background: var(--card);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.field {
+    margin-bottom: 0.8rem;
+}
+
+button,
+.btn {
+    background: var(--accent);
+    color: #000;
+    border: none;
+    padding: 0.7rem 1.8rem;
+    border-radius: 6px;
+    font-family:   sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.msg {
+    padding: 0.7rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    display: none;
+}
+
+.msg.success {
+    background: #1a3a2a;
+    color: var(--success);
+    display: block;
+}
+
+.msg.error {
+    background: #3a1a1a;
+    color: var(--error);
+    display: block;
+}
+
+.count-box {
+    text-align: center;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.count-box span {
+    font-family:  sans-serif;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.reg-list {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.reg-list h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.7rem;
+    color: var(--muted);
+}
+
+.reg-item {
+    font-size: 0.82rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+}
+
+.stars {
+    display: flex;
+    gap: 0.3rem;
+    margin: 0.3rem 0;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--muted);
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: var(--accent);
+}
+
+.fb-list {
+    margin-top: 1.5rem;
+}
+
+.fb-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin-bottom: 0.7rem;
+    font-size: 0.85rem;
+}
+
+.fb-card .stars-show {
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .hero {
+        padding: 2.5rem 1rem 2rem;
+    }
+}
+
